@@ -1,5 +1,6 @@
 <?php
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
 Route::get('/', function () {
     return "Hola mundo";
@@ -42,3 +43,11 @@ Route::get('/contactanos',function(){
     return view('contacto');
 });
 
+Route::get('/try-db-connect',function(){
+    try {
+        DB::connection('')->getPdo();
+        return "Conexion a la bases de datos exitosa.";
+    } catch (Exception $e) {
+        return "No se puede conectar a la base de datos. <br>  Error: ".$e->getMessage();
+    }
+});
