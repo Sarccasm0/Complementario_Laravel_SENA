@@ -12,8 +12,15 @@
         <h1>Bienvenido a InkTrack</h1>
     </header>
     @include('partials.menu')
+
     <main>
         @yield('contenido')
     </main>
+
+    <footer>
+        <p>2025- InkTrack - Jefferson Rodriguez - ADSO</p>
+    </footer>
+
+    @stack('scripts')
 </body>
 </html>

@@ -31,4 +31,14 @@ Route::get('/foreach',function(){
     return view("estructuras.foreach",compact(var_name: "lista"));
 });
 
+#Añadir la ruta a categoria
+Route::get('/categoria',function(){
+    return view('categoria');
+});
+
+
+#Añadir la ruta a contacto
+Route::get('/contactanos',function(){
+    return view('contacto');
+});
 
